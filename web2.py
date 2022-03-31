@@ -12,7 +12,7 @@ soup = BeautifulSoup(data, "html.parser")
 # <td class="title">
 # 	<a href="/webtoon/detail?titleId=20853">마음의 소리 50화 &lt;격렬한 나의 하루&gt;</a>
 # </td>
-cartoons = soup.find_all("p", class_="title")
+cartoons = soup.find_all("td", class_="title")
 print("개수:{0}".format(len(cartoons)))
 title = cartoons[0].find("a").text 
 link = cartoons[0].find("a")["href"]
